@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #FEF9F0;
+  color: #2E3B3B;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* header & навигация */
+.header {
+  background: #FFFFFFE6;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #FFE2C1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 16px 0;
+}
+
+.logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #C26E3C;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  transition: color 0.2s;
+}
+.logo a:hover {
+  color: #9F4A2A;
+}
+.logo span {
+  color: #F4A261;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #4A5B5B;
+  transition: 0.2s;
+  font-size: 1rem;
+}
+.nav-links a:hover {
+  color: #C26E3C;
+}
+
+/* секции общие */
+section {
+  padding: 70px 0;
+  border-bottom: 1px solid #FFEFE0;
+}
+section:last-of-type {
+  border-bottom: none;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #4F3A2C;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+.section-title:after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: #F4C2A2;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+.section-sub {
+  color: #6F5B4C;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  max-width: 700px;
+}
+
+/* hero */
+.hero {
+  background: linear-gradient(135deg, #FFF5E8 0%, #FEEBDD 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #C26E3C;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #4A5B5B;
+}
+.hero-btn {
+  background: #C26E3C;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.2s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.hero-btn:hover {
+  background: #9F4A2A;
+  transform: translateY(-2px);
+}
+
+/* карточки и сетки */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 20px;
+}
+.feature-card {
+  background: white;
+  padding: 28px 20px;
+  border-radius: 28px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+  transition: all 0.25s;
+  text-align: center;
+  border: 1px solid #FFE8DC;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+}
+.feature-icon {
+  font-size: 2.5rem;
+  color: #F4A261;
+  margin-bottom: 18px;
+}
+.feature-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #4F3A2C;
+}
+.feature-card p {
+  color: #5A6E6E;
+  font-size: 0.95rem;
+}
+
+/* советы списком */
+.tips-list {
+  background: white;
+  border-radius: 32px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+  border: 1px solid #FDE5D2;
+}
+.tip-item {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 28px;
+  align-items: flex-start;
+  border-bottom: 1px dashed #FFE2C1;
+  padding-bottom: 20px;
+}
+.tip-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.tip-icon {
+  background: #FEF2E8;
+  width: 44px;
+  height: 44px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #C26E3C;
+  flex-shrink: 0;
+}
+.tip-text h4 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #4F3A2C;
+}
+.tip-text p {
+  color: #5A6E6E;
+}
+
+/* игры - карточки */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 20px;
+}
+.game-card {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+  transition: 0.2s;
+  border: 1px solid #FFE6D6;
+}
+.game-card h3 {
+  font-size: 1.3rem;
+  margin: 12px 0 8px;
+  color: #C26E3C;
+}
+.game-card i {
+  font-size: 2rem;
+  color: #F4A261;
+}
+.game-tag {
+  background: #FEF2E8;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 40px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #C26E3C;
+  margin-top: 12px;
+}
+
+/* контактная секция */
+.contact-card {
+  background: #FFFFFFCC;
+  backdrop-filter: blur(4px);
+  border-radius: 36px;
+  padding: 40px;
+  text-align: center;
+  background: #FFF7F0;
+  border: 1px solid #FFE2C1;
+}
+.contact-card i {
+  font-size: 2.5rem;
+  color: #C26E3C;
+  margin-bottom: 16px;
+}
+.contact-card a {
+  color: #C26E3C;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #F4C2A2;
+}
+.contact-card a:hover {
+  color: #9F4A2A;
+}
+
+/* подвал */
+footer {
+  background: #2E3B3B;
+  color: #DFD9D0;
+  padding: 40px 0 24px;
+  text-align: center;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.footer-links a {
+  color: #F4C2A2;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.footer-links a:hover {
+  color: #FFE0B5;
+  text-decoration: underline;
+}
+.copyright {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* адаптив */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .nav-links {
+    justify-content: center;
+    gap: 20px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.7rem;
+  }
+  section {
+    padding: 50px 0;
+  }
+  .tip-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .tip-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .contact-card {
+    padding: 28px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 18px;
+  }
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+}
